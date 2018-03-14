@@ -3,7 +3,8 @@ package br.com.dvlima.ocpjp8.topic04;
 /**
  Lambda Built-in Functional Interfaces
 
- - Use  the built-in interfaces included in the java.util.function package such as Predicate, Consumer, Function, and Supplier
+ - Use the built-in interfaces included in the java.util.function package 
+ 	such as Predicate, Consumer, Function, and Supplier
  - Develop code that uses primitive versions of functional interfaces
  - Develop code that uses binary versions of functional interfaces
  - Develop code that uses the UnaryOperator interface

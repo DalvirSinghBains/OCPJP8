@@ -13,4 +13,5 @@ package br.com.dvlima.ocpjp8.topic03;
  - Use method references with Streams
  */
 public class GenericsAndCollections {
+	
 }
