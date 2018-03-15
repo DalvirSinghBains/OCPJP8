@@ -2,6 +2,7 @@ package br.com.dvlima.ocpjp8.topic03._generics_and_collections._01_generic_class
 
 public abstract class Courier {				//Nongeneric class
 
+	//void
 	public <E> void deliver(E[] array) {	//Generic Method
 		for (E item : array) {
 			System.out.println("Delivering - " + item);

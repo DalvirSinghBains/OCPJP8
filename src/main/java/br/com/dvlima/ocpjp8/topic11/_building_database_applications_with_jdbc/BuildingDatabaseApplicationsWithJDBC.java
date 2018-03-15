@@ -1,4 +1,4 @@
-package br.com.dvlima.ocpjp8.topic11.building_database_applications_with_jdbc;
+package br.com.dvlima.ocpjp8.topic11._building_database_applications_with_jdbc;
 
 /**
  Building Database Applications with JDBC

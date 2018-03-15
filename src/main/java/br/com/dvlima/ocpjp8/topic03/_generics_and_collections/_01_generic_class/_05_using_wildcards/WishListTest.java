@@ -60,7 +60,16 @@ public class WishListTest {
 		//Won't compile; gift doesn't extend Phone
 		//List<? super Gift> list3 = new ArrayList<Phone>();
 		//Valid; Phone extends Gift
-		List<? super Phone> list4 = new ArrayList<Gift>();//pg259/294
+		List<? super Phone> list4 = new ArrayList<Gift>();
+		
+		List<? super Gift> list = new ArrayList<>();
+		list.add(new Gift());
+		list.add(new Book());
+		list.add(new Phone());
+		//list.add(new Object());  Won't compile
+		
+		for (Object obj : list) System.out.println(obj);
+		
 	}
 
 }
