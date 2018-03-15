@@ -50,15 +50,17 @@ public class WishListTest {
 
 		wrapPersonalGift(sk8);
 		
-		
 		//LOWER-BOUNDED WILDCARDS
 		
 		//Though Gift isn't its own superclass, this assignment is valid.
 		List<? super Gift> list1 = new ArrayList<Gift>();
+		
 		//Gift extends Object
 		List<? super Gift> list2 = new ArrayList<Object>();
+		
 		//Won't compile; gift doesn't extend Phone
 		//List<? super Gift> list3 = new ArrayList<Phone>();
+		
 		//Valid; Phone extends Gift
 		List<? super Phone> list4 = new ArrayList<Gift>();
 		
