@@ -5,7 +5,7 @@ package br.com.dvlima.ocpjp8.topic01._java_class_design;
 
  - Implement encapsulation
  - Implement inheritance including visibility modifiers and composition
- - Implement polymorphism
+ - Implement polymorphisms
  - Override hashCode, equals, and toString methods from Object class
  - Create and use singleton classes and immutable classes
  - Develop code that uses static keyword on initialize blocks, variables, methods, and classes
@@ -46,6 +46,7 @@ public class JavaClassDesign {
 //	• In covariant return types, you can provide the derived class of the return type in the
 //	overriding method.
 	
+	
 	/**Override hashCode, equals, and toString methods from Object class*/
 //	• You can override clone(), equals(), hashCode(), toString() and finalize()
 //	methods in your classes. Since getClass(), notify(), notifyAll(), and the
@@ -55,7 +56,6 @@ public class JavaClassDesign {
 //	override the hashCode() and equals() methods correctly. For instance, ensure that
 //	the hashCode() method returns the same hash value for two objects if the equals()
 //	method returns true for them.
-	
 	
 	
 	/**Create and use singleton classes and immutable classes*/
