@@ -5,11 +5,9 @@ package br.com.dvlima.ocpjp8.topic02._advanced_java_class_design;
  * <p>
  * 1- Develop code that uses abstract classes and methods
  * 2- Develop code that uses the final keyword
- * 3- Create inner classes including static inner class, local class, nested 
- * 	class, and anonymous inner class
+ * 3- Create inner classes including static inner class, local class, nested class, and anonymous inner class
  * 4- Use enumerated types including methods, and constructors in an enum type
- * 5- Develop code that declares, implements and/or extends interfaces and use 
- * 	the @Override annotation.
+ * 5- Develop code that declares, implements and/or extends interfaces and use the @Override annotation.
  * 6- Create and use Lambda expressions
  */
 public class AdvancedJavaClassDesign {
