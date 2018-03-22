@@ -10,7 +10,6 @@ public class UnaryOperatorInterfaceTest {
 		System.out.println("Before: " + ell); // Before: [-11, 22, 33, -44, 55]
 		ell.replaceAll(Math::abs);
 		System.out.println("After: " + ell); // After: [11, 22, 33, 44, 55]
-
 	}
 
 }

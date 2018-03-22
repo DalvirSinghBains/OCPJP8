@@ -19,7 +19,6 @@ public class PrimitiveVersionsSupplierInterface {
 
 		// DoubleSupplier
 		// double getAsDouble() Takes no arguments and returns a double value
-
 	}
 
 }
