@@ -1,9 +1,9 @@
 package br.com.dvlima.ocpjp8.topic02._advanced_java_class_design._03_inner_classes;
 
 /** Anonymous Inner Classes */
-//• Anonymous classes are defined in the new expression itself.
+// Anonymous classes are defined in the new expression itself.
 
-//• You cannot explicitly extend a class or explicitly implement interfaces when defining
+// You cannot explicitly extend a class or explicitly implement interfaces when defining
 //an anonymous class.
 public class StatusDescriptiveColor {
 

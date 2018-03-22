@@ -9,9 +9,9 @@ public final class ImmutableCircle {
 	private final String center;
 	private final int radius;
 	
-//	• The class is declared final to prevent inheritance and overriding of its methods
-//	• The class has only final data members and they are private
-//	• Because center is a mutable field, the getter method getCenter() returns a copy of the Point object
+//	 The class is declared final to prevent inheritance and overriding of its methods
+//	 The class has only final data members and they are private
+//	 Because center is a mutable field, the getter method getCenter() returns a copy of the Point object
 	
 	/*
 	public Point getCenter() {

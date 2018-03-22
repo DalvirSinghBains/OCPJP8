@@ -1,16 +1,16 @@
 package br.com.dvlima.ocpjp8.topic02._advanced_java_class_design._03_inner_classes;
 
 /**Inner Classes*/
-//• The accessibility (public, protected, etc.) of the inner class is defined by the
+// The accessibility (public, protected, etc.) of the inner class is defined by the
 //outer class.
 
-//• Just like top-level classes, an inner class can extend a class or can implement
+// Just like top-level classes, an inner class can extend a class or can implement
 //interfaces. Similarly, other classes can extend an inner class, and other classes or
 //interfaces can extend or implement an inner interface.
 
-//• An inner class can be declared final or abstract.
+// An inner class can be declared final or abstract.
 
-//• Inner classes can have inner classes, but you’ll have a hard time reading or
+// Inner classes can have inner classes, but youll have a hard time reading or
 //understanding such complex nesting of classes. (Meaning: Avoid them!)
 class Circle {
 

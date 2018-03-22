@@ -1,14 +1,14 @@
 package br.com.dvlima.ocpjp8.topic02._advanced_java_class_design._02_final_keyword;
 
-//• The final modifier can be applied to a class, method, or variable. All methods of a
+// The final modifier can be applied to a class, method, or variable. All methods of a
 //final class are implicitly final (hence non-overridable).
 
-//• A final variable can be assigned only once. If a variable declaration defines a
+// A final variable can be assigned only once. If a variable declaration defines a
 //variable as final but did not initialize it, then it is referred to as blank final. You need
 //to initialize a blank final in all the constructors you have defined in the class or in an
 //initialization block.
 
-//• The keyword final can be applied to parameters. The value of a final parameter
+// The keyword final can be applied to parameters. The value of a final parameter
 //cannot be changed once assigned.
 
 public abstract class Shape {

@@ -15,13 +15,13 @@ public class FindFirstUse1 {
 		/**
 		 * In this program, we get the list of methods in the Stream itself using
 		 * reflection. Then, using map() method, we get the list of method names and
-		 * check if the names end with the string “Match”, sort those methods, and
+		 * check if the names end with the string Match, sort those methods, and
 		 * return the first found method. If we are looking for any method name that
-		 * ends with “Match”, then we could use findAny() method instead.
+		 * ends with Match, then we could use findAny() method instead.
 		 */
 		Optional<String> methodName = Arrays.stream(methods)//
 				// .peek(method -> System.out.println(method.getName()))//
-				.map(method -> method.getName())//
+				.map(Method::getName)//
 				.filter(name -> name.endsWith("Match"))//
 				.sorted()//
 				.findFirst();

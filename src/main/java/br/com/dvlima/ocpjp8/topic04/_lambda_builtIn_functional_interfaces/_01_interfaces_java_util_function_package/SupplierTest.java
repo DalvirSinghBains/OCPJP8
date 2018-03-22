@@ -6,7 +6,7 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 /**
- * A Supplier<T> “supplies” takes nothing but returns something: it has no
+ * A Supplier<T> supplies takes nothing but returns something: it has no
  * arguments and returns an object (of generic type T). You can call get()
  * method on a Supplier object.
  */

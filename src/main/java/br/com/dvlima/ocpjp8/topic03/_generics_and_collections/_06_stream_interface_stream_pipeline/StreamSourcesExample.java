@@ -33,15 +33,15 @@ public class StreamSourcesExample {
 
 		/**
 		 * The java.nio.file.Files class has lines() method that returns a
-		 * Stream<String>. This code prints the contents of the file “FileRead.java” in
+		 * Stream<String>. This code prints the contents of the file FileRead.java in
 		 * the current directory.
 		 */
 		// Files.lines(Paths.get("./StreamSourcesExample.java")).forEach(System.out::println);
 
 		/**
 		 * The java.util.Pattern class has splitAsStream() method that returns a
-		 * Stream<String>. This code splits the input string “java 8 streams” based on
-		 * whitespace and hence prints the strings “java”, “8”, and “streams” on the
+		 * Stream<String>. This code splits the input string java 8 streams based on
+		 * whitespace and hence prints the strings java, 8, and streams on the
 		 * console.
 		 */
 		Pattern.compile(" ").splitAsStream("java 8 streams").forEach(System.out::println);
@@ -55,7 +55,7 @@ public class StreamSourcesExample {
 
 		/**
 		 * The String class has chars() method (newly introduced in Java 8 in
-		 * CharSequence—an interface that String class implements). This method returns
+		 * CharSequencean interface that String class implements). This method returns
 		 * an IntStream (why IntStream? Remember that there is no equivalent char
 		 * specialization for Streams). This code calls sorted() method on this stream,
 		 * so the stream elements get sorted in ascending order. Because it is a stream

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.function.Function;
 
 /**
- * A Function<T, R> “operates” on something and returns something: it takes one
+ * A Function<T, R> operates on something and returns something: it takes one
  * argument (of generic type T) and returns an object (of generic type R). You
  * can call apply() method on a Function object.
  */
@@ -30,9 +30,9 @@ public class FunctionTest {
 
 		/**
 		 * The identity() function in Function just returns the passed argument without
-		 * doing anything! Then what is its use? It is sometimes used for testing – when
+		 * doing anything! Then what is its use? It is sometimes used for testing  when
 		 * you write a piece of code that takes a Function and want to check if it
-		 * works, you can call identity() because it doesn’t do anything. Here is an
+		 * works, you can call identity() because it doesnt do anything. Here is an
 		 * example:
 		 */
 		Arrays.stream("4, -9, 16".split(", "))//

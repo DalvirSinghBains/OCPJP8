@@ -1,16 +1,16 @@
 package br.com.dvlima.ocpjp8.topic02._advanced_java_class_design._03_inner_classes;
 
 /** Local Inner Classes */
-//• You can create a non-static local class inside a body of code. Interfaces cannot have
+// You can create a non-static local class inside a body of code. Interfaces cannot have
 //local classes, and you cannot create local interfaces.
 
-//• Local classes are accessible only from the body of the code in which the class is
+// Local classes are accessible only from the body of the code in which the class is
 //defined. The local classes are completely inaccessible outside the body of the code in
 //which the class is defined.
 
-//• You can extend a class or implement interfaces while defining a local class.
+// You can extend a class or implement interfaces while defining a local class.
 
-//• A local class can access all the variables available in the body of the code in which it
+// A local class can access all the variables available in the body of the code in which it
 //is defined. Variables accessed by local inner classes are considered effectively final.
 class StatusReporter {
 

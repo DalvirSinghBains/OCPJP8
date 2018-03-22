@@ -20,9 +20,9 @@ public class FileTest {
 		// You can also specify the current working directory for the JVM as the
 		// user.dir property value as a JVM option
 		//
-		// java –Duser.dir=C:\test <other-arguments>
+		// java Duser.dir=C:\test <other-arguments>
 
-		/** Checking for a File’s Existence */
+		/** Checking for a Files Existence */
 
 		// Create a File object
 		File dummyFile = new File("dummy.txt");

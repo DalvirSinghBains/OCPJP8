@@ -1,6 +1,6 @@
 package br.com.dvlima.ocpjp8.topic02._advanced_java_class_design._05_override_annotation;
 
-//• Optionally, you can use the @Override annotation to indicate that a method is
+// Optionally, you can use the @Override annotation to indicate that a method is
 //overriding a method from its base type(s). In this case, the roll method is overridden
 //in the Circle class and makes use of the @Override annotation.
 abstract class Shape {

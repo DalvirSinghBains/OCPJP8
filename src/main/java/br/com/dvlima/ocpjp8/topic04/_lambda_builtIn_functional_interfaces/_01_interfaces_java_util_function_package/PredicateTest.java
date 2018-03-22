@@ -6,7 +6,7 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 /**
- * A Predicate<T> “affirms” something as true or false: it takes an argument of
+ * A Predicate<T> affirms something as true or false: it takes an argument of
  * type T, and returns a boolean value. You can call test() method on a
  * Predicate object.
  * 

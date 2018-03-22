@@ -4,7 +4,7 @@ import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 /**
- * A Consumer<T> “consumes” something: it takes an argument (of generic type T)
+ * A Consumer<T> consumes something: it takes an argument (of generic type T)
  * and returns nothing (void). You can call accept() method on a Consumer
  * object.
  */
