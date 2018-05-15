@@ -1,15 +1,23 @@
 package br.com.dvlima.ocpjp8.topic06._exceptions_and_assertions._02_catch_multicatch_and_finally;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class TryAndCatchStatements {
-    //Java provides the try and catch keywords to handle any exceptions that can get thrown in the code you write.
+// This interface is meant for implemented by classes that would read an integer from a file
+interface IntReader {
+    int readIntFromFile() throws IOException;
 }
 
 // A simple progam to accept an integer from user in normal case,
 // otherwise prints an error message
+
+public class TryAndCatchStatements {
+    //Java provides the try and catch keywords to handle any exceptions that can get thrown in the code you write.
+}
 
 class ScanInt2 {
     /*
@@ -67,6 +75,9 @@ class ScanInt3 {
     }
 }
 
+// Java provides a feature named multi-catch blocks in which you can combine multiple catch handlers.
+// Let’s use this feature to combine the catch clauses of NoSuchElementException and IllegalStateException
+
 // A program that scans an integer from a given string
 class ScanInt4 {
     //    The string to scan integer from it is:
@@ -87,8 +98,7 @@ class ScanInt4 {
     }
 }
 
-// Java provides a feature named multi-catch blocks in which you can combine multiple catch handlers.
-// Let’s use this feature to combine the catch clauses of NoSuchElementException and IllegalStateException
+//Releasing Resources
 
 // A program that illustrates multi-catch blocks
 class ScanInt5 {
@@ -109,8 +119,6 @@ class ScanInt5 {
         }
     }
 }
-
-//Releasing Resources
 
 class ScanInt6 {
     /*
@@ -184,4 +192,102 @@ class ScanInt7 {
 }
 
 // The Throws Clause
+class ThrowsClause1 {
+    /*
+    Reading an integer from the file 'integer.txt':
+    Exception in thread "main" java.io.FileNotFoundException: integer.txt (The system cannot
+    find the file specified)
+            at java.io.FileInputStream.open(Native Method)
+            at java.io.FileInputStream.<init>(FileInputStream.java:138)
+            at java.util.Scanner.<init>(Scanner.java:656)
+            at ThrowsClause2.main(ThrowsClause2.java:7)
+     */
+    public static void main(String[] args) throws FileNotFoundException {
+        System.out.println("Reading an integer from the file 'integer.txt': ");
+        Scanner consoleScanner = new Scanner(new File("integer.txt"));
+        System.out.println("You typed the integer value: " + consoleScanner.nextInt());
+    }
+}
 
+//Method Overriding and the Throws Clause
+
+class ThrowsClause3 {
+    // since readIntFromFile() throws FileNotFoundException and main() does not handle
+    // it, the main() method declares this exception in its throws clause
+    public static void main(String[] args) throws FileNotFoundException {
+        System.out.println("Reading an integer from the file 'integer.txt': ");
+        System.out.println("You typed the integer value: " + new ThrowsClause3().readIntFromFile());
+    }
+
+    // since this method does not handle FileNotFoundException,
+    // the method must declare this exception in the throws clause
+    public int readIntFromFile() throws FileNotFoundException {
+        Scanner consoleScanner = new Scanner(new File("integer.txt"));
+        return consoleScanner.nextInt();
+    }
+}
+
+class UncheckedException extends RuntimeException {
+    public UncheckedException() {
+        super();
+    }
+
+    public UncheckedException(String message) {
+        super(message);
+    }
+
+    public UncheckedException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public UncheckedException(Throwable cause) {
+        super(cause);
+    }
+
+    protected UncheckedException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(message, cause, enableSuppression, writableStackTrace);
+    }
+}
+
+class ThrowsClause4 implements IntReader {
+    // implement readIntFromFile with the same throws clause or a more specific throws clause
+    public int readIntFromFile() throws FileNotFoundException, NullPointerException, UncheckedException {
+        Scanner consoleScanner = new Scanner(new File("integer.txt"));
+        return consoleScanner.nextInt();
+    }
+}
+
+//    Points to Remember
+
+// If a method does not have a throws clause, it does not mean it cannot throw any exceptions; it just means it cannot
+// throw any checked exceptions.
+
+// Static initialization blocks cannot throw any checked exceptions. Why? Remember that static initialization blocks
+// are invoked when the class is loaded, so there is no way to handle the thrown exceptions in the caller. Further,
+// there is no way to declare the checked exceptions in a throws clause (because they are blocks, not methods).
+
+// Non-static initialization blocks can throw checked exceptions; however, all the constructors should declare those
+// exceptions in their throws clause. Why? The compiler merges the code for non-static initialization blocks and
+// constructors during its code generation phase, hence the throws clause of the constructor can be used for declaring
+// the checked exceptions that a non-static initialization block can throw.
+
+// An overriding method cannot declare more checked exceptions in the throws clause than the list of exceptions declared
+// in the throws clause of the base method. Why? The callers of the base method see only the list of the exceptions given
+// in the throws clause of that method and will declare or handle these checked exceptions in their code
+// (and not more than that).
+
+// An overriding method can declare more specific exceptions than the exception(s) listed in the throws clause of the
+// base method; in other words, you can declare derived exceptions in the throws clause of the overriding method.
+
+// If a method is declared in two or more interfaces, and if that method declares to throw different exceptions in the
+// throws clause, the method implementation should list all of these exceptions.
+
+
+//    Chaining and Rethrowing Exceptions
+/*
+    catch(LowLevelException lle) {
+        // wrap the low-level exception to a higher-level exception;
+        // also, chain the original exception to the newly thrown exception
+        throw new HighLevelException(lle);
+    }
+*/
