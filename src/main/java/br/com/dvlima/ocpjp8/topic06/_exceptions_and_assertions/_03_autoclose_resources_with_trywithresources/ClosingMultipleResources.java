@@ -23,7 +23,7 @@ public class ClosingMultipleResources {
         System.out.println("Pass the name of the file in the current directory to be zipped: ");
 
         try (Scanner consoleScanner = new Scanner(System.in)) {
-             consoleScanner.next();
+            consoleScanner.next();
         }
 
         // name of the zip file is the input file name with the suffix ".zip"
@@ -65,3 +65,27 @@ public class ClosingMultipleResources {
         }
     }*/
 }
+
+//    Points to Remember
+// You cannot assign to the resource variables declared in the try-with-resources within the body of the
+// try-with-resources statement. This is to make sure that the same resources acquired in the try-with-resources header
+// are released in the finally block.
+
+// It is a common mistake to close a resource explicitly inside the try-with-resources statement. Remember that
+// try-with-resources expands to calling the close() method in the finally block, so the expanded code will have
+// a double call to the close() method if you explicitly provide a close() method. Consider the following code:
+/*
+    try(Scanner consoleScanner = new Scanner(System.in)) {
+          System.out.println("You typed the integer value: " +
+          consoleScanner.nextInt());
+          consoleScanner.close();
+          // explicit call to close() method - remember that try-with-resources
+          // statement will also expand to calling close() in finally method;
+          // hence this will result in call to close() method in Scanner twice!
+    }
+ */
+
+// The documentation of the close() method in the Scanner class says that if the scanner object is already closed,
+// then invoking the method again will have no effect. So, you are safe in this case. However, in general, you cannot
+// expect all the resources to have implemented a close() method that is safe to call twice. So, it is a bad practice
+// to explicitly call the close() method inside a try-with-resource statement.
