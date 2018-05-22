@@ -51,4 +51,58 @@ public class JavaIOFundamentals {
     - The abstract classes of InputStream and OutputStream and their derived classes in the java.io package provide support for byte streams.
  */
 
+//    Read and write data from the console
+
+// The public static fields in, out, and err in java.lang.System class respectively represent the standard input, output and error streams.
+// System.in is of type java.io.InputStream and System.out and System.err are of type java.io.PrintStream.
+
+// You can redirect standard streams by calling the methods System.setIn, System.setOut and System.setError.
+
+// You can obtain a reference to the console using the System.console() method; if the JVM is not associated with any console,
+// this method will fail and return null.
+
+// Many methods are provided in Console-support formatted I/O. You can use the printf() and format() methods available
+// in the Console class to print formatted text; the overloaded readLine() and readPassword() methods take format strings as arguments.
+
+// The template of format specifiers is: %[flags][width][.precision]datatype_specifier Each format specifier starts with
+// the % sign, followed by flags, width, and precision information, and ending with a data type specifier.
+// In the format string, the flags, width, and precision information are optional but the % sign and data type specifier are mandatory.
+
+// Use the readPassword() method for reading secure strings such as passwords. It is recommended to use Array’s fill()
+// method to “empty” the password read into the character array (to avoid malicious access to the typed passwords).
+
+/** Use in the java.io package
+ * BufferedReader,
+ * BufferedWriter,
+ * File,
+ * FileReader,
+ * FileWriter,
+ * FileInputStream,
+ * FileOutputStream,
+ * ObjectOutputStream,
+ * ObjectInputStream,
+ * PrintWriter
+ * */
+
+// The java.io package has classes supporting both character streams and byte streams.
+
+// You can use character streams for text-based I/O. Byte streams are used for data based I/O.
+
+// Character streams for reading and writing are called readers and writers respectively
+// (represented by the abstract classes of Reader and Writer).
+
+// Byte streams for reading and writing are called input streams and output streams respectively
+// (represented by the abstract classes of InputStream and OutputStream).
+
+// You should only use character streams for processing text files (or human-readable files), and byte streams for data files.
+// If you try using one type of stream instead of another, your program won’t work as you would expect;
+// even if it works by chance, you’ll get nasty bugs. So don’t mix up streams, and use the right stream for a given task at hand.
+
+// For both byte and character streams, you can use buffering. The buffer classes are provided as wrapper classes for
+// the underlying streams. Using buffering will speed up the I/O when performing bulk I/O operations.
+
+// For processing data with primitive data types and strings, you can use data streams.
+
+// You can use object streams (classes ObjectInputStream and ObjectOutputStream) for reading and writing objects in memory to files and vice versa.
+
 }
