@@ -4,8 +4,7 @@ class RunnableImpl implements Runnable {
     public static void main(String args[]) throws Exception {
         Thread myThread = new Thread(new RunnableImpl());
         myThread.start();
-        System.out.println("In main(); thread name is: " +
-                Thread.currentThread().getName());
+        System.out.println("In main(); thread name is: " + Thread.currentThread().getName());
     }
 
     public void run() {
